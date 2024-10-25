@@ -347,34 +347,6 @@
         height: 25px;
         font-size: 14px;
       }
-      #dark-mode-toggle {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        padding: 10px 15px;
-        background-color: var(--latte-lavender);
-        color: var(--latte-base);
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition:
-          background-color 0.3s,
-          transform 0.2s;
-        font-weight: 600;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-      #dark-mode-toggle:hover {
-        background-color: var(--latte-sapphire);
-        transform: translateY(-2px);
-      }
-      body.dark-mode #dark-mode-toggle {
-        background-color: var(--mocha-peach);
-        color: var(--mocha-base);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-      }
-      body.dark-mode #dark-mode-toggle:hover {
-        background-color: var(--mocha-maroon);
-      }
       .wide {
         width: 65px;
       }
@@ -485,7 +457,7 @@
         transform: translateX(-50%);
       }
 
-      #theme-toggle {
+      #dark-mode-toggle {
         flex: 0 0 auto;
         position: relative;
         z-index: 1002;
@@ -497,7 +469,7 @@
         transition: color 0.3s;
       }
 
-      body.dark-mode #theme-toggle {
+      body.dark-mode #dark-mode-toggle {
         color: var(--mocha-text);
       }
 
@@ -627,8 +599,8 @@
         />
       </div>
       <button
-        id="theme-toggle"
-        class="theme-toggle"
+        id="dark-mode-toggle"
+        class="dark-mode-toggle"
         aria-label="Toggle dark mode"
       >
         <span id="theme-icon">◐</span>
@@ -662,7 +634,7 @@
         </li>
         
         <li>
-          <a href="#windows-specific">Windows Specific</a>
+          <a href="#win-specific">Win Specific</a>
         </li>
         
       </ul>
@@ -872,12 +844,12 @@
         <div class="shortcuts-container">
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Windows+S</div>
+            <div class="shortcut-key">Win+S</div>
             <div class="shortcut-description">Open Search</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Windows+.</div>
+            <div class="shortcut-key">Win+.</div>
             <div class="shortcut-description">Open emoji panel</div>
           </div>
           
@@ -887,17 +859,17 @@
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Windows+D</div>
+            <div class="shortcut-key">Win+D</div>
             <div class="shortcut-description">Show desktop</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Windows+PrtScn</div>
+            <div class="shortcut-key">Win+PrtScn</div>
             <div class="shortcut-description">Take a screenshot of the entire screen and save it</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Windows+Shift+S</div>
+            <div class="shortcut-key">Win+Shift+S</div>
             <div class="shortcut-description">Take a screenshot of selected area</div>
           </div>
           
@@ -1025,57 +997,57 @@
         </div>
       </div>
       
-      <div class="section" id="windows-specific">
-        <h2>Windows Specific</h2>
+      <div class="section" id="win-specific">
+        <h2>Win Specific</h2>
         <div class="shortcuts-container">
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Windows+E</div>
+            <div class="shortcut-key">Win+E</div>
             <div class="shortcut-description">Open File Explorer</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Windows+I</div>
+            <div class="shortcut-key">Win+I</div>
             <div class="shortcut-description">Open Settings</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Windows+L</div>
+            <div class="shortcut-key">Win+L</div>
             <div class="shortcut-description">Lock your PC</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Windows+R</div>
+            <div class="shortcut-key">Win+R</div>
             <div class="shortcut-description">Open Run dialog</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Windows+X</div>
+            <div class="shortcut-key">Win+X</div>
             <div class="shortcut-description">Open Quick Access Menu</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Windows+Tab</div>
+            <div class="shortcut-key">Win+Tab</div>
             <div class="shortcut-description">Open Task View</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Windows+↑</div>
+            <div class="shortcut-key">Win+↑</div>
             <div class="shortcut-description">Maximize the current window</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Windows+↓</div>
+            <div class="shortcut-key">Win+↓</div>
             <div class="shortcut-description">Minimize the current window or restore a maximized window</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Windows+←</div>
+            <div class="shortcut-key">Win+←</div>
             <div class="shortcut-description">Snap current window to the left half of the screen</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Windows+→</div>
+            <div class="shortcut-key">Win+→</div>
             <div class="shortcut-description">Snap current window to the right half of the screen</div>
           </div>
           
@@ -1197,21 +1169,21 @@
       // Call generateKeyboard on page load
       document.addEventListener("DOMContentLoaded", generateKeyboard);
 
-      // Theme toggle functionality
-      const themeToggle = document.getElementById("theme-toggle");
+      // Dark-Mode toggle functionality
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
       const themeIcon = document.getElementById("theme-icon");
       const body = document.body;
 
-      function updateThemeToggle() {
+      function updateDarkModeToggle() {
         themeIcon.textContent = body.classList.contains("dark-mode")
           ? "☀️"
           : "🌙";
       }
 
-      themeToggle.addEventListener("click", () => {
+      darkModeToggle.addEventListener("click", () => {
         body.classList.toggle("dark-mode");
         localStorage.setItem("darkMode", body.classList.contains("dark-mode"));
-        updateThemeToggle();
+        updateDarkModeToggle();
         adjustLayout();
       });
 
@@ -1241,7 +1213,7 @@
         body.classList.remove("dark-mode");
       }
 
-      updateThemeToggle();
+      updateDarkModeToggle();
       adjustLayout();
 
       function highlightKeys(shortcut) {
