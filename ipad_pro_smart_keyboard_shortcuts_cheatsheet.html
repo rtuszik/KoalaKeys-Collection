@@ -172,7 +172,6 @@
       .shortcut {
         background-color: var(--crust);
         border-radius: 5px;
-        padding: 6px 8px;
         cursor: pointer;
         transition:
           background-color 0.3s,
@@ -182,7 +181,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 40px;
+        min-height: 40px;
         overflow: hidden;
       }
       body.dark-mode .shortcut {
@@ -191,7 +190,7 @@
       }
       .shortcut:hover {
         background-color: var(--surface1);
-        transform: translateY(-2px);
+        transform: translateY(-3px);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       }
       body.dark-mode .shortcut:hover {
@@ -209,23 +208,68 @@
         transition:
           color 0.3s,
           font-size 0.3s;
-        flex-shrink: 0;
-        margin-right: 8px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        flex: 1 1 50%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      .text-shortcut {
+        font-size: 0.95rem;
+        color: var(--latte-text);
+      }
+
+      body.dark-mode .text-shortcut {
+        color: var(--mocha-text);
       }
       body.dark-mode .shortcut-key {
         color: var(--mocha-red);
       }
+      
+      .shortcut-key .key-part {
+          color: var(--latte-mauve);
+      }
+
+      body.dark-mode .shortcut-key .key-part {
+          color: var(--mocha-red);
+      }
+
+      .shortcut-key .separator {
+          color: var(--latte-subtext0);
+          font-weight: normal;
+          margin-right: 0.3em;
+          margin-left: 0.3em;
+      }
+
+      body.dark-mode .shortcut-key .separator {
+          color: var(--mocha-subtext0);
+      }
+
+
+      .shortcut-key .modifier-symbol {
+          font-size: 1.5em;
+          display: inline-block;
+          vertical-align: middle;
+      }
+
+      .shortcut-key span:has(> span.modifier-symbol) {
+          line-height: 1;
+      }
+
       .shortcut-description {
         font-size: 0.85rem;
         text-align: right;
-        flex-grow: 1;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        flex: 1 1 50%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
         transition: font-size 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+
       }
       @media (max-width: 600px) {
         .shortcuts-container {
@@ -648,6 +692,7 @@
       </ul>
     </nav>
     <div id="content-wrapper">
+    
       <p class="layout-info">
         Keyboard Layout: US | System: Darwin
       </p>
@@ -751,39 +796,121 @@
           </div>
         </div>
       </div>
-
+      
       
       <div class="section" id="general">
         <h2>General</h2>
         <div class="shortcuts-container">
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+H</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">H</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Go to Home Screen</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+Space</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">Space</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Show or hide Search</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+Tab</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">Tab</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Switch to the next app</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+Shift+Tab</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">Shift</span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">Tab</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Switch to the previous app</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+.</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">.</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Equivalent to pressing the Escape key</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+Option+D</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">Option</span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">D</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Show or hide the Dock</div>
           </div>
           
@@ -795,17 +922,53 @@
         <div class="shortcuts-container">
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+Q</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">Q</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Quit the current app (if supported)</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+N</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">N</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Create a new item in the current app (if supported)</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+W</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">W</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Close the current tab or window</div>
           </div>
           
@@ -817,62 +980,211 @@
         <div class="shortcuts-container">
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+A</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">A</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Select all</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+X</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">X</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Cut</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+C</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">C</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Copy</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+V</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">V</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Paste</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+Z</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">Z</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Undo</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+Shift+Z</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">Shift</span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">Z</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Redo</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+←</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">←</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Move cursor to beginning of line</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+→</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">→</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Move cursor to end of line</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+↑</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">↑</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Move cursor to beginning of document</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+↓</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">↓</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Move cursor to end of document</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Option+←</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part">Option</span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">←</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Move cursor to previous word</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Option+→</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part">Option</span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">→</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Move cursor to next word</div>
           </div>
           
@@ -884,17 +1196,53 @@
         <div class="shortcuts-container">
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+B</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">B</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Bold</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+I</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">I</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Italic</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+U</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">U</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Underline</div>
           </div>
           
@@ -906,22 +1254,70 @@
         <div class="shortcuts-container">
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Globe+←</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part">Globe</span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">←</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Move to the app on the left in Split View</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Globe+→</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part">Globe</span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">→</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Move to the app on the right in Split View</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Globe+↑</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part">Globe</span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">↑</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Open App Switcher</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Globe+↓</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part">Globe</span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">↓</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Show all windows of the current app</div>
           </div>
           
@@ -933,17 +1329,68 @@
         <div class="shortcuts-container">
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+Shift+3</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">Shift</span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">3</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Take a screenshot</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+Shift+4</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">Shift</span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">4</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Take a screenshot and open Markup</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+Shift+5</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">Shift</span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">5</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Start/stop screen recording</div>
           </div>
           
@@ -955,27 +1402,112 @@
         <div class="shortcuts-container">
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+Option+1</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">Option</span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">1</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Increase brightness</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+Option+2</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">Option</span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">2</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Decrease brightness</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+Option+3</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">Option</span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">3</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Increase volume</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+Option+4</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">Option</span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">4</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Decrease volume</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+Option+5</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">Option</span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">5</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Mute/unmute</div>
           </div>
           
@@ -987,32 +1519,104 @@
         <div class="shortcuts-container">
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+T</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">T</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Open a new tab</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+W</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">W</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Close the current tab</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+L</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">L</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Focus on the address bar</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+R</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">R</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Reload the current page</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+[</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">[</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Go back to the previous page</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+]</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">]</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Go forward to the next page</div>
           </div>
           
@@ -1024,27 +1628,82 @@
         <div class="shortcuts-container">
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+F</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">F</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Find files or folders</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+N</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">N</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Create a new folder</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+Delete</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">Delete</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Delete selected item</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Cmd+I</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part"><span class="modifier-symbol">⌘</span></span>
+                  
+                    <span class="separator">+</span>
+                  
+                
+                  <span class="key-part">I</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Get info about selected item</div>
           </div>
           
           <div class="shortcut" title="Click to highlight on keyboard">
-            <div class="shortcut-key">Space</div>
+            <div class="shortcut-key ">
+              
+                
+                  <span class="key-part">Space</span>
+                  
+                
+              
+            </div>
             <div class="shortcut-description">Quick Look selected item</div>
           </div>
           
@@ -1058,8 +1717,8 @@
       const keyLabelMappings = {
         Darwin: {
           Cmd: "⌘",
-          Alt: "Option",
-          Ctrl: "Control",
+          Alt: "⌥",
+          Ctrl: "⌃",
           Shift: "Shift",
           CapsLock: "Caps",
           Tab: "Tab",
@@ -1110,6 +1769,20 @@
         return keyLabelMappings[system][key] || key;
       }
 
+    function wrapModifierSymbols(text) {
+        // Define the symbols we want to make larger
+        const modifierSymbols = ['⌘', '⌥', '⌃', '⇧'];
+
+        // Replace each modifier symbol with a wrapped version
+        modifierSymbols.forEach(symbol => {
+            text = text.replace(
+                new RegExp(symbol, 'g'),
+                `<span class="modifier-symbol">${symbol}</span>`
+            );
+        });
+
+        return text;
+    }
       function generateKeyboard() {
         const keyboard = document.getElementById("keyboard");
         const layout = keyboard.getAttribute("data-layout");
@@ -1214,37 +1887,40 @@
       adjustLayout();
 
       function highlightKeys(shortcut) {
-        document
-          .querySelectorAll(".key")
-          .forEach((key) => key.classList.remove("active"));
+        // Clear any previously highlighted keys
+        document.querySelectorAll(".key").forEach((key) => key.classList.remove("active"));
 
-        const keys = shortcut.split("+");
+        // Get the shortcut key parts
+        const shortcutParts = shortcut.split('+').map(part => part.trim());
         const system = document.getElementById("keyboard").getAttribute("data-system");
 
-        keys.forEach((key) => {
-          let keyToFind = key.trim().toLowerCase();
-          const keyElements = document.querySelectorAll(".key");
+        shortcutParts.forEach((keyToFind) => {
+            keyToFind = keyToFind.toLowerCase();
+            const keyElements = document.querySelectorAll(".key");
 
-          keyElements.forEach((element) => {
-            const dataKey = element.getAttribute("data-key").toLowerCase();
-            const keyLabel = element.textContent.toLowerCase();
+            keyElements.forEach((element) => {
+                const dataKey = element.getAttribute("data-key").toLowerCase();
+                const keyLabel = element.textContent.toLowerCase();
 
-            if (
-              dataKey === keyToFind ||
-              keyLabel === keyToFind ||
-              (keyToFind === "cmd" && (dataKey === "cmd" || dataKey === "win" || dataKey === "super"))
-            ) {
-              element.classList.add("active");
-            }
-          });
+                if (
+                    dataKey === keyToFind ||
+                    keyLabel === keyToFind ||
+                    (keyToFind === "cmd" && (dataKey === "cmd" || dataKey === "win" || dataKey === "super"))
+                ) {
+                    element.classList.add("active");
+                }
+            });
         });
       }
 
       document.querySelectorAll(".shortcut").forEach((shortcut) => {
-        shortcut.addEventListener("click", function () {
-          const shortcutKey = this.querySelector(".shortcut-key").textContent;
-          highlightKeys(shortcutKey);
+        
+        shortcut.addEventListener("click", function() {
+            // Get the text content and replace <sep> with +
+            const shortcutKey = this.querySelector(".shortcut-key").textContent.replace(/\s*\+\s*/g, '+');
+            highlightKeys(shortcutKey);
         });
+        
       });
 
       // Keep original case for key data-attributes
@@ -1268,16 +1944,15 @@
       function adjustLayout() {
         const isNavActive = document.body.classList.contains("nav-active");
         const shortcutKeys = document.querySelectorAll(".shortcut-key");
-        const shortcutDescriptions = document.querySelectorAll(
-          ".shortcut-description",
-        );
+        const shortcutDescriptions = document.querySelectorAll(".shortcut-description");
         const shortcuts = document.querySelectorAll(".shortcut");
 
         shortcuts.forEach((shortcut) => {
           shortcut.style.flexDirection = "row";
-          shortcut.style.alignItems = "center";
-          shortcut.style.height = "40px";
-          shortcut.style.padding = "6px 8px";
+          shortcut.style.alignItems = "flex-start";
+          shortcut.style.minHeight = "40px";
+          shortcut.style.height = "auto";
+          shortcut.style.padding = "8px";
         });
 
         shortcutKeys.forEach((key) => {
@@ -1285,18 +1960,16 @@
           key.style.marginRight = "8px";
           key.style.marginBottom = "0";
           key.style.width = isNavActive ? "40%" : "50%";
-          key.style.whiteSpace = "nowrap";
-          key.style.overflow = "hidden";
-          key.style.textOverflow = "ellipsis";
+          key.style.wordWrap = "break-word";
+          key.style.overflowWrap = "break-word";
         });
 
         shortcutDescriptions.forEach((desc) => {
           desc.style.fontSize = isNavActive ? "0.75rem" : "0.85rem";
           desc.style.textAlign = "right";
           desc.style.width = isNavActive ? "60%" : "50%";
-          desc.style.whiteSpace = "nowrap";
-          desc.style.overflow = "hidden";
-          desc.style.textOverflow = "ellipsis";
+          desc.style.wordWrap = "break-word";
+          desc.style.overflowWrap = "break-word";
         });
       }
 
