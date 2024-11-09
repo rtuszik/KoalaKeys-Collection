@@ -1,0 +1,80 @@
+title: "Safari Browser MacOS"
+layout:
+    keyboard: US
+    system: Darwin
+shortcuts:
+    Tab Management:
+        "CMD+T":
+            description: "Open new tab"
+        "CMD+W":
+            description: "Close current tab"
+        "CMD+Shift+T":
+            description: "Reopen last closed tab"
+        "CMD+Click":
+            description: "Open link in new tab"
+        "CMD+Shift+Click":
+            description: "Open link in new tab and switch to it"
+        "CTRL+Tab":
+            description: "Switch to next tab"
+        "CTRL+Shift+Tab":
+            description: "Switch to previous tab"
+        "CMD+1-9":
+            description: "Switch to specific tab by number"
+
+    Navigation:
+        "CMD+L":
+            description: "Focus on address bar"
+        "CMD+Left":
+            description: "Go back to previous page"
+        "CMD+Right":
+            description: "Go forward to next page"
+        "CMD+R":
+            description: "Reload current page"
+        "CMD+Shift+R":
+            description: "Reload current page without cache"
+        "Space":
+            description: "Scroll down one page"
+        "Shift+Space":
+            description: "Scroll up one page"
+
+    Bookmarks and History:
+        "CMD+D":
+            description: "Add current page to bookmarks"
+        "CMD+Shift+D":
+            description: "Add all tabs to bookmarks"
+        "CMD+Y":
+            description: "Open History"
+        "CMD+B":
+            description: "Toggle Bookmarks sidebar"
+
+    Window Management:
+        "CMD+N":
+            description: "Open new window"
+        "CMD+Shift+N":
+            description: "Open new private window"
+        "CMD+M":
+            description: "Minimize window"
+        "CMD+H":
+            description: "Hide Safari"
+
+    Page Features:
+        "CMD++":
+            description: "Zoom in"
+        "CMD+-":
+            description: "Zoom out"
+        "CMD+0":
+            description: "Reset zoom level"
+        "CMD+F":
+            description: "Find on page"
+        "CMD+P":
+            description: "Print current page"
+
+    Reading and Sharing:
+        "CMD+Shift+B":
+            description: "Toggle Reading List sidebar"
+        "CMD+Shift+L":
+            description: "Show downloads"
+        "CMD+I":
+            description: "Show or hide Reader view"
+        "CMD+Shift+I":
+            description: "Send webpage via email"

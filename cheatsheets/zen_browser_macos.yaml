@@ -1,128 +1,128 @@
 title: "Zen Browser MacOS"
 layout:
-  keyboard: US
-  system: Darwin
+    keyboard: US
+    system: Darwin
 shortcuts:
-  "Zen Browser":
-    "CMD+,":
-      description: "Settings"
-    "CMD+H":
-      description: "Hide Zen"
-    "CMD+SHIFT+H":
-      description: "Hide Others"
-    "CMD+Q":
-      description: "Quit Zen"
-  "File":
-    "CMD+T":
-      description: "New Tab"
-    "CMD+N":
-      description: "New Window"
-    "CMD+ALT+P":
-      description: "New Private Window"
-    "CMD+O":
-      description: "Open File"
-    "CMD+W":
-      description: "Close Tab"
-    "CMD+ALT+W":
-      description: "Close Window"
-    "CMD+S":
-      description: "Save Page As"
-    "CMD+P":
-      description: "Print"
-  "Edit":
-    "CMD+X":
-      description: "Cut"
-    "CMD+C":
-      description: "Copy"
-    "CMD+V":
-      description: "Paste"
-    "CMD+A":
-      description: "Select All"
-    "CMD+F":
-      description: "Find in Page"
-    "CMD+G":
-      description: "Find Again"
-  "View":
-    "CMD+ALT+H":
-      description: "History"
-    "CMD+B":
-      description: "Bookmarks"
-    "CMD++":
-      description: "Zoom In"
-    "CMD+-":
-      description: "Zoom Out"
-    "CTRL+CMD+F":
-      description: "Enter Full Screen"
-    "CMD+SHIFT+R":
-      description: "Enter Reader View"
-  "Bookmarks":
-    "CMD+ALT+O":
-      description: "Manage Bookmarks"
-    "CMD+D":
-      description: "Bookmark Current Tab"
-  "Tools":
-    "CMD+J":
-      description: "Downloads"
-    "CMD+ALT+A":
-      description: "Add-ons and Themes"
-  "Browser Tools":
-    "CMD+SHIFT+I":
-      description: "Web Developer Tools"
-    "CMD+ALT+J":
-      description: "Browser Console"
-    "CMD+SHIFT+M":
-      description: "Responsive Design Mode"
-    "CMD+U":
-      description: "Page Source"
-    "CMD+I":
-      description: "Page Info"
-  "Window":
-    "CTRL+F":
-      description: "Fill"
-    "CTRL+C":
-      description: "Center"
-  "Move & Resize":
-    "CTRL+Left":
-      description: "Left"
-    "CTRL+Right":
-      description: "Right"
-    "CTRL+Up":
-      description: "Top"
-    "CTRL+Down":
-      description: "Bottom"
-    "CTRL+ALT+Left":
-      description: "Left & Right"
-    "CTRL+SHIFT+ALT+Left":
-      description: "Left & Quarters"
-    "CTRL+ALT+Right":
-      description: "Right & Left"
-    "CTRL+SHIFT+ALT+Right":
-      description: "Right & Quarters"
-    "CTRL+ALT+Up":
-      description: "Top & Bottom"
-    "CTRL+SHIFT+ALT+Up":
-      description: "Top & Quarters"
-    "CTRL+ALT+Down":
-      description: "Bottom & Top"
-    "CTRL+SHIFT+ALT+Down":
-      description: "Bottom & Quarters"
-    "CMD+M":
-      description: "Minimize"
-  "Expose and Spaces":
-    "CTRL+Up":
-      description: "All windows"
-    "CTRL+Down":
-      description: "Application windows"
-  "Input Sources":
-    "CTRL+.":
-      description: "Select the previous input source"
-    "CTRL+ALT+.":
-      description: "Select next source in Input menu"
-  "KeyCue":
-    "CMD+SHIFT+K":
-      description: "KeyCue Settings"
-    "CMD+SHIFT+F":
-      description: "Find Shortcuts"
-  "Help":
-    "CMD+?":
-      description: "Get Help"
+    "Zen Browser":
+        "CMD+,":
+            description: "Settings"
+        "CMD+H":
+            description: "Hide Zen"
+        "CMD+SHIFT+H":
+            description: "Hide Others"
+        "CMD+Q":
+            description: "Quit Zen"
+    "File":
+        "CMD+T":
+            description: "New Tab"
+        "CMD+N":
+            description: "New Window"
+        "CMD+ALT+P":
+            description: "New Private Window"
+        "CMD+O":
+            description: "Open File"
+        "CMD+W":
+            description: "Close Tab"
+        "CMD+ALT+W":
+            description: "Close Window"
+        "CMD+S":
+            description: "Save Page As"
+        "CMD+P":
+            description: "Print"
+    "Edit":
+        "CMD+X":
+            description: "Cut"
+        "CMD+C":
+            description: "Copy"
+        "CMD+V":
+            description: "Paste"
+        "CMD+A":
+            description: "Select All"
+        "CMD+F":
+            description: "Find in Page"
+        "CMD+G":
+            description: "Find Again"
+    "View":
+        "CMD+ALT+H":
+            description: "History"
+        "CMD+B":
+            description: "Bookmarks"
+        "CMD++":
+            description: "Zoom In"
+        "CMD+-":
+            description: "Zoom Out"
+        "CTRL+CMD+F":
+            description: "Enter Full Screen"
+        "CMD+SHIFT+R":
+            description: "Enter Reader View"
+    "Bookmarks":
+        "CMD+ALT+O":
+            description: "Manage Bookmarks"
+        "CMD+D":
+            description: "Bookmark Current Tab"
+    "Tools":
+        "CMD+J":
+            description: "Downloads"
+        "CMD+ALT+A":
+            description: "Add-ons and Themes"
+    "Browser Tools":
+        "CMD+SHIFT+I":
+            description: "Web Developer Tools"
+        "CMD+ALT+J":
+            description: "Browser Console"
+        "CMD+SHIFT+M":
+            description: "Responsive Design Mode"
+        "CMD+U":
+            description: "Page Source"
+        "CMD+I":
+            description: "Page Info"
+    "Window":
+        "CTRL+F":
+            description: "Fill"
+        "CTRL+C":
+            description: "Center"
+    "Move & Resize":
+        "CTRL+Left":
+            description: "Left"
+        "CTRL+Right":
+            description: "Right"
+        "CTRL+Up":
+            description: "Top"
+        "CTRL+Down":
+            description: "Bottom"
+        "CTRL+ALT+Left":
+            description: "Left & Right"
+        "CTRL+SHIFT+ALT+Left":
+            description: "Left & Quarters"
+        "CTRL+ALT+Right":
+            description: "Right & Left"
+        "CTRL+SHIFT+ALT+Right":
+            description: "Right & Quarters"
+        "CTRL+ALT+Up":
+            description: "Top & Bottom"
+        "CTRL+SHIFT+ALT+Up":
+            description: "Top & Quarters"
+        "CTRL+ALT+Down":
+            description: "Bottom & Top"
+        "CTRL+SHIFT+ALT+Down":
+            description: "Bottom & Quarters"
+        "CMD+M":
+            description: "Minimize"
+    "Expose and Spaces":
+        "CTRL+Up":
+            description: "All windows"
+        "CTRL+Down":
+            description: "Application windows"
+    "Input Sources":
+        "CTRL+.":
+            description: "Select the previous input source"
+        "CTRL+ALT+.":
+            description: "Select next source in Input menu"
+    "KeyCue":
+        "CMD+SHIFT+K":
+            description: "KeyCue Settings"
+        "CMD+SHIFT+F":
+            description: "Find Shortcuts"
+    "Help":
+        "CMD+?":
+            description: "Get Help"

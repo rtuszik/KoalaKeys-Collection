@@ -1,0 +1,153 @@
+title: "Yazi File Manager"
+layout:
+    keyboard: US
+    system: Darwin
+shortcuts:
+    Navigation:
+        "k":
+            description: "Move cursor up"
+        "j":
+            description: "Move cursor down"
+        "l":
+            description: "Enter hovered directory"
+        "h":
+            description: "Leave current directory (go to parent)"
+        "K":
+            description: "Seek up 5 units in preview"
+        "J":
+            description: "Seek down 5 units in preview"
+        "g+g":
+            description: "Move cursor to the top"
+        "G":
+            description: "Move cursor to the bottom"
+    Selection:
+        "Space":
+            description: "Toggle selection of hovered file/directory"
+        "v":
+            description: "Enter visual mode (selection mode)"
+        "V":
+            description: "Enter visual mode (unset mode)"
+        "CTRL+a":
+            description: "Select all files"
+        "CTRL+r":
+            description: "Inverse selection of all files"
+        "Esc":
+            description: "Cancel selection"
+    "File Operations":
+        "o":
+            description: "Open selected files"
+        "O":
+            description: "Open selected files interactively"
+        "Enter":
+            description: "Open selected files"
+        "CTRL+Enter":
+            description: "Open selected files interactively"
+        "y":
+            description: "Yank selected files (copy)"
+        "x":
+            description: "Yank selected files (cut)"
+        "p":
+            description: "Paste yanked files"
+        "P":
+            description: "Paste yanked files (overwrite if destination exists)"
+        "-":
+            description: "Symlink the absolute path of yanked files"
+        "_":
+            description: "Symlink the relative path of yanked files"
+        "CTRL+-":
+            description: "Hardlink yanked files"
+        "Y":
+            description: "Cancel the yank status"
+        "d":
+            description: "Trash selected files"
+        "D":
+            description: "Permanently delete selected files"
+        "a":
+            description: "Create a file (ends with / for directories)"
+        "r":
+            description: "Rename selected file(s)"
+    "Command Execution":
+        ";":
+            description: "Run a shell command"
+        ":":
+            description: "Run a shell command (block until finishes)"
+    "Path Operations":
+        "c+c":
+            description: "Copy the file path"
+        "c+d":
+            description: "Copy the directory path"
+        "c+f":
+            description: "Copy the filename"
+        "c+n":
+            description: "Copy the filename without extension"
+    "File Finding":
+        "f":
+            description: "Filter files"
+        "/":
+            description: "Find next file"
+        "?":
+            description: "Find previous file"
+        "n":
+            description: "Go to the next found"
+        "N":
+            description: "Go to the previous found"
+    "Search":
+        "s":
+            description: "Search files by name using fd"
+        "S":
+            description: "Search files by content using ripgrep"
+        "CTRL+s":
+            description: "Cancel the ongoing search"
+    "Sorting":
+        ",+m":
+            description: "Sort by modified time"
+        ",+M":
+            description: "Sort by modified time (reverse)"
+        ",+c":
+            description: "Sort by creation time"
+        ",+C":
+            description: "Sort by creation time (reverse)"
+        ",+e":
+            description: "Sort by file extension"
+        ",+E":
+            description: "Sort by file extension (reverse)"
+        ",+a":
+            description: "Sort alphabetically"
+        ",+A":
+            description: "Sort alphabetically (reverse)"
+        ",+n":
+            description: "Sort naturally"
+        ",+N":
+            description: "Sort naturally (reverse)"
+        ",+s":
+            description: "Sort by size"
+        ",+S":
+            description: "Sort by size (reverse)"
+        ",+r":
+            description: "Sort randomly"
+    "Tab Management":
+        "t":
+            description: "Create a new tab with CWD"
+        "1":
+            description: "Switch to first tab"
+        "2":
+            description: "Switch to second tab"
+        "3":
+            description: "Switch to third tab"
+        "[":
+            description: "Switch to previous tab"
+        "]":
+            description: "Switch to next tab"
+        "{":
+            description: "Swap current tab with previous tab"
+        "}":
+            description: "Swap current tab with next tab"
+        "CTRL+c":
+            description: "Close the current tab"
+    "View Options":
+        ".":
+            description: "Toggle visibility of hidden files"
+        "z":
+            description: "Jump to directory using zoxide"
+        "Z":
+            description: "Jump to directory or reveal file using fzf"
