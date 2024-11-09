@@ -28,16 +28,6 @@ jobs:
               with:
                   python-version: "3.13"
 
-            - name: Debug Directory Structure
-              run: |
-                  pwd
-                  echo "Current directory contents:"
-                  ls -la
-                  echo "\nKoalaKeys directory contents:"
-                  ls -la KoalaKeys
-                  echo "\nKoalaKeys-Collection directory contents:"
-                  ls -la KoalaKeys-Collection
-
             - name: Install dependencies
               working-directory: KoalaKeys
               run: pip install -r requirements.txt
@@ -48,8 +38,11 @@ jobs:
                   cp -r KoalaKeys-Collection/cheatsheets/* KoalaKeys/cheatsheets/
 
             - name: Run processing script
-              working-directory: KoalaKeys
-              run: python src/generate-cheatsheet.py
+              run: |
+                  cd KoalaKeys
+                  pwd
+                  ls -la src/
+                  python src/generate-cheatsheet.py
 
             - name: Copy output files
               run: |
