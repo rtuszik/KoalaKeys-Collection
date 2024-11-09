@@ -42,7 +42,7 @@ jobs:
                   cd KoalaKeys
                   pwd
                   ls -la src/
-                  python src/generate-cheatsheet.py
+                  python src/generate_cheatsheet.py
 
             - name: Copy output files
               run: |
