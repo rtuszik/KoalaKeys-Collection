@@ -1,0 +1,62 @@
+name: Process and Deploy
+on:
+    push:
+        branches: [main]
+    workflow_dispatch:
+
+permissions:
+    contents: write
+    pages: write
+    id-token: write
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout KoalaKeys
+              uses: actions/checkout@v4
+              with:
+                  repository: rtuszik/KoalaKeys
+                  path: KoalaKeys
+
+            - name: Checkout Collection
+              uses: actions/checkout@v4
+              with:
+                  repository: rtuszik/KoalaKeys-Collection
+                  path: KoalaKeys-Collection
+
+            - name: setup python
+              uses: actions/setup-python@v5
+              with:
+                  python-version: "3.13"
+
+            - name: Install dependencies
+              run: |
+                  cd KoalaKeys
+                  pip install -r requirements.txt
+
+            - name: Copy input files
+              run: |
+                  cp -r KoalaKeys-Collection/cheatsheets/* KoalaKeys/cheatsheets/
+
+            - name: Run processing script
+              run: |
+                  cd KoalaKeys
+                  python src/generate-cheatsheet.py
+
+            - name: Copy output files
+              run: |
+                  mkdir -p KoalaKeys-Collection/output
+                  cp -r KoalaKeys/output/* KoalaKeys-Collection/output/
+
+            - name: Setup Pages
+              uses: actions/configure-pages@v5
+
+            # Deploy to GitHub Pages
+            - name: Deploy to GitHub Pages
+              uses: JamesIves/github-pages-deploy-action@v4
+              with:
+                  folder: KoalaKeys-Collection/output
+                  repository-name: rtuszik/KoalaKeys-Collection
+                  branch: gh-pages
+                  token: ${{ secrets.GITHUB_TOKEN}}
