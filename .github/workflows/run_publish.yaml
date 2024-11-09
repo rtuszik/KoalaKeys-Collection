@@ -34,6 +34,7 @@ jobs:
               run: |
                   cd KoalaKeys
                   pip install -r requirements.txt
+                  cd ..
 
             - name: Copy input files
               run: |
