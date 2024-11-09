@@ -1,0 +1,112 @@
+title: "Visual Studio Code MacOS"
+layout:
+    keyboard: US
+    system: Darwin
+shortcuts:
+    "General":
+        "CMD+SHIFT+P":
+            description: "Show Command Palette"
+        "CMD+P":
+            description: "Quick Open, Go to File"
+        "CMD+W":
+            description: "Close window/instance"
+        "CMD+,":
+            description: "Open Settings"
+        "CMD+B":
+            description: "Toggle Sidebar"
+
+    "Basic Editing":
+        "CMD+X":
+            description: "Cut line"
+        "CMD+C":
+            description: "Copy line"
+        "CMD+V":
+            description: "Paste"
+        "CMD+/":
+            description: "Toggle line comment"
+        "ALT+Up":
+            description: "Move line up"
+        "ALT+Down":
+            description: "Move line down"
+        "CMD+Enter":
+            description: "Insert line below"
+        "CMD+SHIFT+Enter":
+            description: "Insert line above"
+        "CMD+SHIFT+K":
+            description: "Delete line"
+
+    "Navigation":
+        "CMD+G":
+            description: "Go to line"
+        "CMD+SHIFT+O":
+            description: "Go to symbol"
+        "CTRL+G":
+            description: "Go to line"
+        "CMD+Left":
+            description: "Go to beginning of line"
+        "CMD+Right":
+            description: "Go to end of line"
+
+    "Search and Replace":
+        "CMD+F":
+            description: "Find"
+        "CMD+ALT+F":
+            description: "Replace"
+        "CMD+SHIFT+F":
+            description: "Find in files"
+        "CMD+SHIFT+H":
+            description: "Replace in files"
+
+    "Multi-cursor and Selection":
+        "CMD+D":
+            description: "Add selection to next find match"
+        "CMD+SHIFT+L":
+            description: "Select all occurrences of current selection"
+        "CMD+U":
+            description: "Undo last cursor operation"
+        "SHIFT+ALT+I":
+            description: "Insert cursor at end of each selected line"
+
+    "Code Folding":
+        "CMD+ALT+[":
+            description: "Fold region"
+        "CMD+ALT+]":
+            description: "Unfold region"
+        "CMD+K CMD+0":
+            description: "Fold all regions"
+        "CMD+K CMD+J":
+            description: "Unfold all regions"
+
+    "Integrated Terminal":
+        "CMD+`":
+            description: "Toggle integrated terminal"
+        "CMD+SHIFT+`":
+            description: "Create new terminal"
+        "CMD+Up":
+            description: "Scroll up terminal"
+        "CMD+Down":
+            description: "Scroll down terminal"
+
+    "File Management":
+        "CMD+N":
+            description: "New file"
+        "CMD+O":
+            description: "Open file"
+        "CMD+S":
+            description: "Save"
+        "CMD+SHIFT+S":
+            description: "Save as"
+        "CMD+W":
+            description: "Close file"
+
+    "Editor Management":
+        "CMD+\\":
+            description: "Split editor"
+        "CMD+1":
+            description: "Focus first editor group"
+        "CMD+2":
+            description: "Focus second editor group"
+        "CMD+K CMD+Left":
+            description: "Focus left editor group"
+        "CMD+K CMD+Right":
+            description: "Focus right editor group"
