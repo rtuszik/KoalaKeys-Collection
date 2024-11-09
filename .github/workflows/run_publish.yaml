@@ -3,12 +3,13 @@ on:
     push:
         branches: [main]
     workflow_dispatch:
+
 permissions:
     contents: write
-    pages: write
-    id-token: write
+
 jobs:
     build-and-deploy:
+        concurrency: ci-${{ github.ref }} # Prevents deployment conflicts
         runs-on: ubuntu-latest
         steps:
             - name: Checkout KoalaKeys
@@ -22,8 +23,9 @@ jobs:
               with:
                   repository: rtuszik/KoalaKeys-Collection
                   path: KoalaKeys-Collection
+                  token: ${{ secrets.GITHUB_TOKEN }}
 
-            - name: setup python
+            - name: Setup Python
               uses: actions/setup-python@v5
               with:
                   python-version: "3.13"
@@ -38,24 +40,18 @@ jobs:
                   cp -r KoalaKeys-Collection/cheatsheets/* KoalaKeys/cheatsheets/
 
             - name: Run processing script
-              run: |
-                  cd KoalaKeys
-                  pwd
-                  ls -la src/
-                  python src/generate_cheatsheet.py
+              working-directory: KoalaKeys
+              run: python src/generate_cheatsheet.py
 
             - name: Copy output files
               run: |
                   mkdir -p KoalaKeys-Collection/output
                   cp -r KoalaKeys/output/* KoalaKeys-Collection/output/
 
-            - name: Setup Pages
-              uses: actions/configure-pages@v5
-
             - name: Deploy to GitHub Pages
               uses: JamesIves/github-pages-deploy-action@v4
               with:
                   folder: KoalaKeys-Collection/output
-                  repository-name: rtuszik/KoalaKeys-Collection
                   branch: gh-pages
-                  token: ${{ secrets.GITHUB_TOKEN }}
+                  clean: true
+                  force: true
