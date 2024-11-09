@@ -12,18 +12,18 @@ jobs:
         concurrency: ci-${{ github.ref }}
         runs-on: ubuntu-latest
         steps:
+            # First checkout the target repo (where we'll deploy)
+            - name: Checkout Collection
+              uses: actions/checkout@v4
+              with:
+                  repository: rtuszik/KoalaKeys-Collection
+
+            # Then checkout the source repo into a subdirectory
             - name: Checkout KoalaKeys
               uses: actions/checkout@v4
               with:
                   repository: rtuszik/KoalaKeys
                   path: KoalaKeys
-
-            - name: Checkout Collection
-              uses: actions/checkout@v4
-              with:
-                  repository: rtuszik/KoalaKeys-Collection
-                  path: KoalaKeys-Collection
-                  token: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Setup Python
               uses: actions/setup-python@v5
@@ -37,7 +37,7 @@ jobs:
             - name: Copy input files
               run: |
                   mkdir -p KoalaKeys/cheatsheets
-                  cp -r KoalaKeys-Collection/cheatsheets/* KoalaKeys/cheatsheets/
+                  cp -r cheatsheets/* KoalaKeys/cheatsheets/
 
             - name: Run processing script
               working-directory: KoalaKeys
@@ -45,14 +45,13 @@ jobs:
 
             - name: Copy output files
               run: |
-                  mkdir -p KoalaKeys-Collection/output
-                  cp -r KoalaKeys/output/* KoalaKeys-Collection/output/
+                  mkdir -p output
+                  cp -r KoalaKeys/output/* output/
 
             - name: Deploy to GitHub Pages
               uses: JamesIves/github-pages-deploy-action@v4
               with:
-                  folder: KoalaKeys-Collection/output
+                  folder: output
                   branch: gh-pages
                   clean: true
                   force: true
-                  token: ${{ secrets.GITHUB_TOKEN }}
