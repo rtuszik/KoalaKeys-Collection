@@ -9,7 +9,7 @@ permissions:
 
 jobs:
     build-and-deploy:
-        concurrency: ci-${{ github.ref }} # Prevents deployment conflicts
+        concurrency: ci-${{ github.ref }}
         runs-on: ubuntu-latest
         steps:
             - name: Checkout KoalaKeys
@@ -55,3 +55,4 @@ jobs:
                   branch: gh-pages
                   clean: true
                   force: true
+                  token: ${{ secrets.GITHUB_TOKEN }}
