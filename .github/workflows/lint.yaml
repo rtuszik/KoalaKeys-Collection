@@ -1,0 +1,23 @@
+name: Super-Linter
+on: [push, pull_request, workflow_dispatch]
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
+
+            - name: Lint Code Base
+              uses: github/super-linter@v4
+              env:
+                  VALIDATE_ALL_CODEBASE: true
+                  VALIDATE_MARKDOWN_PRETTIER: true
+                  VALIDATE_GITLEAKS: true
+                  VALIDATE_GITHUB_ACTIONS: true
+                  VALIDATE_YAML: true
+                  VALIDATE_YAML_PRETTIER: true
+                  FIX_YAML_PRETTIER: true
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
