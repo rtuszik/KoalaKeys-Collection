@@ -1,10 +1,13 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/rtuszik/KoalaKeys/main/assets/icons/KoalaKeys.png" width="256">
+
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/directory-file-count/rtuszik/KoalaKeys-Collection/cheatsheets?style=for-the-badge&label=Cheat%20Sheets">
 </p>
 
 # KoalaKeys Collection
-
-![GitHub repo file or directory count (in path)](https://img.shields.io/github/directory-file-count/rtuszik/KoalaKeys-Collection/cheatsheets?style=for-the-badge&label=Cheat%20Sheets)
 
 A community-driven collection of keyboard shortcut cheat sheets. This repository serves as a central hub for sharing and discovering keyboard shortcuts across different applications, tools, and operating systems.
 
