@@ -1,0 +1,88 @@
+title: "Python Built-in Functions and Methods"
+RenderKeys: false
+AllowText: true
+layout:
+  keyboard: US
+  system: Darwin
+shortcuts:
+  "Basic Operations":
+    "print()":
+      description: "Output to stdout"
+    "len()":
+      description: "Get sequence length"
+    "type()":
+      description: "Get object type"
+    "input()":
+      description: "Read user input"
+  
+  "Type Conversion":
+    "int()":
+      description: "Convert to integer"
+    "str()":
+      description: "Convert to string"
+    "float()":
+      description: "Convert to float"
+    "list()":
+      description: "Convert to list"
+    "dict()":
+      description: "Convert to dictionary"
+    "set()":
+      description: "Convert to set"
+    
+  "List Methods":
+    "list.append()":
+      description: "Add item to end"
+    "list.extend()":
+      description: "Add iterable to end"
+    "list.pop()":
+      description: "Remove and return item"
+    "list.sort()":
+      description: "Sort in place"
+    "list.reverse()":
+      description: "Reverse in place"
+    
+  "Dictionary Methods":
+    "dict.get()":
+      description: "Get value with default"
+    "dict.keys()":
+      description: "Get all keys"
+    "dict.values()":
+      description: "Get all values"
+    "dict.items()":
+      description: "Get key-value pairs"
+    "dict.update()":
+      description: "Update dictionary"
+    
+  "String Methods":
+    "str.split()":
+      description: "Split into list"
+    "str.join()":
+      description: "Join iterable to string"
+    "str.strip()":
+      description: "Remove whitespace"
+    "str.replace()":
+      description: "Replace substring"
+    "str.format()":
+      description: "Format string"
+    
+  "File Operations":
+    "open()":
+      description: "Open file"
+    "file.read()":
+      description: "Read entire file"
+    "file.write()":
+      description: "Write to file"
+    "file.close()":
+      description: "Close file"
+    
+  "Iterables":
+    "range()":
+      description: "Generate number sequence"
+    "enumerate()":
+      description: "Index iterator"
+    "zip()":
+      description: "Combine iterables"
+    "map()":
+      description: "Apply function to iterable"
+    "filter()":
+      description: "Filter iterable"
