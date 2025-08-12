@@ -14,13 +14,13 @@ jobs:
         steps:
             # First checkout the target repo (where we'll deploy)
             - name: Checkout Collection
-              uses: actions/checkout@v4
+              uses: actions/checkout@v5
               with:
                   repository: rtuszik/KoalaKeys-Collection
 
             # Then checkout the source repo into a subdirectory
             - name: Checkout KoalaKeys
-              uses: actions/checkout@v4
+              uses: actions/checkout@v5
               with:
                   repository: rtuszik/KoalaKeys
                   path: KoalaKeys
